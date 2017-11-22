@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器插件</title>
+</head>
+<body>
+<div class="canvas_content">
+    <canvas width="120px" height="120px" id="canvas">
+        canvas
+    </canvas>
+    <div class="voice_time" id="voicTime">00:00</div>
+</div>
+<button id="pauseBtn" onclick="pauseClock()">暂停</button>
+<button id="goOnBtn" onclick="resumeClock()">继续</button>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="countDown.js"></script>
+<script>
+    var defer = $.Deferred();
+    canvasContent(10000, 'red', defer);
+</script>
+</body>
+</html>
